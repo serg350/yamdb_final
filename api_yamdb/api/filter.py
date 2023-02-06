@@ -1,6 +1,5 @@
 from django_filters import rest_framework as filter
 from django_filters.filters import CharFilter, NumberFilter
-
 from reviews.models import Title
 
 

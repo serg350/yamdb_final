@@ -1,10 +1,9 @@
+from api.validators import validate_username
+from api_yamdb.settings import (AUTH_CONF_CODE_MAXLENGTH,
+                                AUTH_EMAIL_MAXLENGTH,
+                                AUTH_USERNAME_MAXLENGTH)
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-
-from api.validators import validate_username
-from api_yamdb.settings import (AUTH_USERNAME_MAXLENGTH,
-                                AUTH_EMAIL_MAXLENGTH,
-                                AUTH_CONF_CODE_MAXLENGTH)
 
 
 class User(AbstractUser):
@@ -59,11 +58,9 @@ class User(AbstractUser):
 
     @property
     def is_admin(self):
-        return (
-            self.role == self.ROLE_ADMIN
-            or self.is_superuser
-            or self.is_staff
-        )
+        return (self.role == self.ROLE_ADMIN
+                or self.is_superuser
+                or self.is_staff)
 
     def __str__(self):
         return self.username
