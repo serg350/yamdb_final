@@ -16,7 +16,7 @@ services:
     #  - db
     #env_file:
     #  - ./.env
-      image: serg3502873/api_yamdb:latest
+    image: serg3502873/api_yamdb:latest
   nginx:
     image: nginx:1.21.3-alpine
 
