@@ -1,9 +1,9 @@
 from api.validators import validate_username
-from api_yamdb.settings import (AUTH_CONF_CODE_MAXLENGTH,
-                                AUTH_EMAIL_MAXLENGTH,
-                                AUTH_USERNAME_MAXLENGTH)
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+
+from api_yamdb.settings import (AUTH_CONF_CODE_MAXLENGTH, AUTH_EMAIL_MAXLENGTH,
+                                AUTH_USERNAME_MAXLENGTH)
 
 
 class User(AbstractUser):

@@ -1,7 +1,7 @@
 from api.validators import validate_year
 from django.conf import settings
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class AbstractCategoryGenreModel(models.Model):

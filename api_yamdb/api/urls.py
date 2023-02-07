@@ -5,7 +5,6 @@ from .views import (CategoriesListView, CommentViewSet, GenreListView,
                     ObtainTokenView, RegisterUserAPIView, ReviewViewSet,
                     TitleListView, UserViewSet)
 
-
 api_v1_router = DefaultRouter()
 api_v1_router.register('users', UserViewSet, basename='users')
 api_v1_router.register('titles', TitleListView, basename='titles')

@@ -9,20 +9,19 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Review, Title
+from users.models import User
+
+from api_yamdb.settings import ERR_EMAIL_EXISTS, ERR_USERNAME_EXISTS
 
 from .filter import TitleFilter
-from .permissions import (AdminOrReadOnly,
-                          AdminOrModeratorOrAuthor,
-                          AdminOrMyselfOnly)
+from .permissions import (AdminOrModeratorOrAuthor, AdminOrMyselfOnly,
+                          AdminOrReadOnly)
 from .serializers import (CategoriesSerializer, CommentSerializer,
                           GenreSerializer, GetTokenSerializer,
                           RegisterSerializer, ReviewSerializer,
                           TitleSerializer, UserSerializer)
 from .utils import create_and_send_code
-from api_yamdb.settings import (ERR_USERNAME_EXISTS,
-                                ERR_EMAIL_EXISTS)
-from reviews.models import Category, Genre, Review, Title
-from users.models import User
 
 
 class CreateDestroyListViewSet(
