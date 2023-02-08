@@ -55,7 +55,7 @@ jobs:
         with:
           push: true
           context: ./api_yamdb/
-          file: ./api_yamdb/Dockerfile
+          #file: ./api_yamdb/Dockerfile
           tags: serg3502873/api_yamdb:latest
 
   deploy:
