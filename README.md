@@ -119,6 +119,7 @@ docker-compose exec web python manage.py dumpdata > fixtures.json
 ```bash
 docker-compose down -v --remove-orphans
 ```
+
 ## Примеры API-запросов
 Подробные примеры запросов и коды ответов приведены в прилагаемой документации в формате ReDoc 
 ## Авторы
