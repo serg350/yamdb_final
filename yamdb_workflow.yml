@@ -60,9 +60,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     if: github.ref == 'refs/heads/master'
-    # Посмотрите пожалуйста такой вопрос, при push и добовленном в гитигнор
-    # ппапки статики не работает редок. Как правильно реализовать
-    # работоспособноть редоку, с тем учетом что статика в гитигноре?
     steps:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
